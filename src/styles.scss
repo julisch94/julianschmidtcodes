@@ -20,3 +20,8 @@ body {
     src: url('./assets/SpaceGrotesk-Regular.otf') format('opentype');
     font-weight: normal;
 }
+
+.no-tap-highlight {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
