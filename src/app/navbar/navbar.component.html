@@ -1,0 +1,14 @@
+<header>
+    <nav>
+        <span>Julian<br />Schmidt</span>
+
+        <div class="icon" (click)="toggleMenu()" [ngClass]="{ active: showMenu }">
+            <div class="hamburger"></div>
+        </div>
+
+        <ul style="display: none;">
+            <li>Home</li>
+            <li>Imprint</li>
+        </ul>
+    </nav>
+</header>

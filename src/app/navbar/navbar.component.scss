@@ -1,0 +1,67 @@
+header {
+    top: 0;
+    padding: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav span {
+    text-transform: lowercase;
+    cursor: pointer;
+}
+
+.icon {
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    position: relative;
+
+    .hamburger {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2rem;
+        height: 0.2rem;
+        background: black;
+        transition: 0.2s;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            width: 2rem;
+            height: 0.2rem;
+            background: black;
+            transition: 0.2s;
+        }
+
+        &:before {
+            top: -0.5rem;
+        }
+
+        &:after {
+            top: 0.5rem;
+        }
+    }
+}
+
+.icon.active {
+    .hamburger {
+        background: rgba(0, 0, 0, 0);
+
+        &:before {
+            top: 0rem;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            top: 0rem;
+            transform: rotate(135deg);
+        }
+    }
+}
