@@ -1,27 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "./theme.scss";
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 1.25rem;
-    font-family: 'Space Grotesk', Helvetica, sans-serif;
+  font-size: $cube;
+  font-family: 'Space Grotesk', Helvetica, sans-serif;
+  color: $foreground;
+}
+
+img {
+  max-width: 100%;
 }
 
 @font-face {
-    font-family: 'Space Grotesk';
-    src: url('./assets/SpaceGrotesk-Bold.otf') format('opentype');
-    font-weight: bold;
+  font-family: 'Space Grotesk';
+  src: url('./assets/SpaceGrotesk-Bold.otf') format('opentype');
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: 'Space Grotesk';
-    src: url('./assets/SpaceGrotesk-Regular.otf') format('opentype');
-    font-weight: normal;
+  font-family: 'Space Grotesk';
+  src: url('./assets/SpaceGrotesk-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/SpaceGrotesk-Light.otf') format('opentype');
+  font-weight: light;
 }
 
 .no-tap-highlight {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }

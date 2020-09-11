@@ -1,0 +1,43 @@
+@import "../../theme.scss";
+
+.caption {
+  padding-bottom: 3*$cube;
+
+  h1 {
+    font-weight: normal;
+    display: inline-block;
+  }
+}
+
+p {
+  max-width: 50%;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+
+  span {
+    display: block;
+    margin-bottom: 0.5*$cube;
+  }
+}
+
+a {
+  display: inline-block;
+  margin-top: $cube;
+  background-color: $highlight;
+  color: $background;
+  text-decoration: none;
+  padding: 0.25*$cube 0.5*$cube;
+
+  &:hover {
+    background-color: $highlight2;
+  }
+}
+
+img {
+  position: absolute;
+  bottom: 0;
+  right: $cube;
+  max-height: 80%;
+  z-index: 0;
+}
