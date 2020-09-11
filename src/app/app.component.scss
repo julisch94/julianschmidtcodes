@@ -13,16 +13,16 @@
 
 .card {
   min-width: 50vw;
-  height: 50vh;
+  min-height: 50vh;
   background-color: $background;
   box-shadow: 0 0.25*$cube 0.5*$cube 0.2*$cube $background2;
-  padding: 1rem;
+  padding: 2*$cube;
   position: relative;
 }
 
 footer {
   width: 100vw;
-  padding: 1rem;
+  padding: $cube;
   position: absolute;
   bottom: 0;
 
