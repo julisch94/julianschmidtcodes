@@ -1,4 +1,5 @@
 @import "../../theme.scss";
+@import "../../mixins.scss";
 
 .caption {
   padding-bottom: 2*$cube;
@@ -19,6 +20,10 @@ p {
     display: block;
     margin-bottom: 0.5*$cube;
   }
+
+  @include breakpoint("xs") {
+    max-width: none;
+  }
 }
 
 a {
@@ -28,6 +33,7 @@ a {
   color: $background;
   text-decoration: none;
   padding: 0.25*$cube 0.5*$cube;
+  font-weight: 700;
 
   &:hover {
     background-color: $highlight2;
@@ -37,7 +43,17 @@ a {
 img {
   position: absolute;
   bottom: 0;
-  right: $cube;
-  max-height: 80%;
+  right: 3*$cube;
+  max-height: 85%;
   z-index: 0;
+
+  @include breakpoint("s") {
+    right: $cube;
+    max-height: 75%;
+  }
+
+  @include breakpoint("xs") {
+    position: static;
+    margin-top: $cube;
+  }
 }
