@@ -2,52 +2,54 @@
 @import '../mixins.scss';
 
 .container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100%;
-    min-height: 100vh;
-    background-color: $background;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  background-color: $background;
+
+  @include breakpoint("s") {
+    justify-content: flex-start;
+  }
 }
 
 .card {
-    min-width: 70vw;
+  min-height: 50vh;
+  background-color: $background;
+  box-shadow: 0 0.25 * $cube 0.5 * $cube 0.2 * $cube $background2;
+  padding: 2 * $cube;
+  position: relative;
+
+  @include breakpoint('m') {
     min-height: 70vh;
-    background-color: $background;
-    box-shadow: 0 0.25 * $cube 0.5 * $cube 0.2 * $cube $background2;
-    padding: 2 * $cube;
-    position: relative;
+  }
 
-    @include breakpoint('m') {
-        min-width: 100vw;
-        min-height: 70vh;
-    }
+  @include breakpoint('s') {
+    padding-left: $cube;
+    padding-right: $cube;
+    min-height: none;
+    box-shadow: none;
+  }
 
-    @include breakpoint('s') {
-        padding-left: $cube;
-        padding-right: $cube;
-        min-height: none;
-        box-shadow: none;
-    }
-
-    @include breakpoint('xs') {
-        padding-bottom: 0;
-    }
+  @include breakpoint('xs') {
+    padding-bottom: 0;
+  }
 }
 
 footer {
-    width: 100vw;
-    padding: $cube;
-    position: absolute;
-    bottom: 0;
+  width: 100vw;
+  padding: $cube;
+  position: absolute;
+  bottom: 0;
 
-    p {
-        font-size: 0.7 * $cube;
-    }
+  p {
+    font-size: 0.75 * $cube;
+  }
 
-    @include breakpoint('s') {
-        position: static;
-    }
+  @include breakpoint('s') {
+    position: static;
+  }
 }
