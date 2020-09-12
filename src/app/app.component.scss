@@ -11,7 +11,7 @@
   min-height: 100vh;
   background-color: $background;
 
-  @include breakpoint("s") {
+  @include breakpoint("m") {
     justify-content: flex-start;
   }
 }
@@ -19,19 +19,19 @@
 .card {
   min-height: 50vh;
   background-color: $background;
-  box-shadow: 0 0.25 * $cube 0.5 * $cube 0.2 * $cube $background2;
+  box-shadow: 0 0.25 * $cube 2 * $cube 0.2 * $cube $background2;
   padding: 2 * $cube;
   position: relative;
 
   @include breakpoint('m') {
     min-height: 70vh;
+    box-shadow: none;
   }
 
   @include breakpoint('s') {
     padding-left: $cube;
     padding-right: $cube;
     min-height: none;
-    box-shadow: none;
   }
 
   @include breakpoint('xs') {
@@ -41,7 +41,9 @@
 
 footer {
   width: 100vw;
-  padding: $cube;
+  padding-bottom: $cube;
+  padding-left: 2*$cube;
+  padding-right: 2*$cube;
   position: absolute;
   bottom: 0;
 
@@ -49,7 +51,12 @@ footer {
     font-size: 0.75 * $cube;
   }
 
-  @include breakpoint('s') {
+  @include breakpoint('m') {
     position: static;
+  }
+
+  @include breakpoint("s") {
+    padding-left: $cube;
+    padding-right: $cube;
   }
 }
