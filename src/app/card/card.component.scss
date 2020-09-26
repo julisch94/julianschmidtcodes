@@ -13,7 +13,6 @@
 }
 
 p {
-    max-width: 50%;
     font-weight: 700;
     position: relative;
     z-index: 1;
@@ -23,8 +22,8 @@ p {
         margin-bottom: 0.5 * $cube;
     }
 
-    @include breakpoint('xs') {
-        max-width: none;
+    @include breakpoint('s') {
+        max-width: 50%;
     }
 }
 
@@ -43,23 +42,27 @@ a {
 }
 
 img {
-    position: absolute;
+    position: static;
+    margin-top: $cube;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100vw;
+    display: block;
     bottom: 0;
-    right: 3 * $cube;
-    max-height: 85%;
+    right: $cube;
     z-index: 0;
 
     @include breakpoint('s') {
+        position: absolute;
+        bottom: 0;
         right: $cube;
         max-height: 75%;
+        z-index: 0;
     }
 
-    @include breakpoint('xs') {
-        position: static;
-        margin-top: $cube;
-        margin-left: auto;
-        margin-right: auto;
-        max-height: 100vw;
-        display: block;
+    @include breakpoint('m') {
+        right: 3 * $cube;
+        max-height: 85%;
+        z-index: 0;
     }
 }
