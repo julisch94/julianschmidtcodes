@@ -1,65 +1,65 @@
-@import "../../theme.scss";
-@import "../../mixins.scss";
+@import '../../theme';
+@import '../../mixins';
 
 .caption {
-  padding-bottom: 2*$cube;
+    padding-bottom: 2 * $cube;
 
-  h1 {
-    font-weight: normal;
-    display: inline-block;
-    font-size: 2*$cube;
-    line-height: 2*$cube;
-  }
+    h1 {
+        font-weight: normal;
+        display: inline-block;
+        font-size: 2 * $cube;
+        line-height: 2 * $cube;
+    }
 }
 
 p {
-  max-width: 50%;
-  font-weight: 700;
-  position: relative;
-  z-index: 1;
+    max-width: 50%;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
 
-  span {
-    display: block;
-    margin-bottom: 0.5*$cube;
-  }
+    span {
+        display: block;
+        margin-bottom: 0.5 * $cube;
+    }
 
-  @include breakpoint("xs") {
-    max-width: none;
-  }
+    @include breakpoint('xs') {
+        max-width: none;
+    }
 }
 
 a {
-  display: inline-block;
-  margin-top: $cube;
-  background-color: $highlight;
-  color: $background;
-  text-decoration: none;
-  padding: 0.25*$cube 0.5*$cube;
-  font-weight: 700;
+    display: inline-block;
+    margin-top: $cube;
+    background-color: $highlight;
+    color: $background;
+    text-decoration: none;
+    padding: 0.25 * $cube 0.5 * $cube;
+    font-weight: 700;
 
-  &:hover {
-    background-color: $highlight2;
-  }
+    &:hover {
+        background-color: $highlight2;
+    }
 }
 
 img {
-  position: absolute;
-  bottom: 0;
-  right: 3*$cube;
-  max-height: 85%;
-  z-index: 0;
+    position: absolute;
+    bottom: 0;
+    right: 3 * $cube;
+    max-height: 85%;
+    z-index: 0;
 
-  @include breakpoint("s") {
-    right: $cube;
-    max-height: 75%;
-  }
+    @include breakpoint('s') {
+        right: $cube;
+        max-height: 75%;
+    }
 
-  @include breakpoint("xs") {
-    position: static;
-    margin-top: $cube;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 100vw;
-    display: block;
-  }
+    @include breakpoint('xs') {
+        position: static;
+        margin-top: $cube;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 100vw;
+        display: block;
+    }
 }
