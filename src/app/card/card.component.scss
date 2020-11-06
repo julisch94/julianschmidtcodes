@@ -27,21 +27,44 @@ p {
     }
 }
 
-a {
-    display: inline-block;
-    margin-top: $cube;
-    background-color: $highlight;
-    color: $background;
-    text-decoration: none;
-    padding: 0.25 * $cube 0.5 * $cube;
-    font-weight: 700;
+div.links {
+  margin-top: $cube;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
 
-    &:hover {
+  * {
+    margin-right: $cube;
+  }
+
+  a {
+    &.btn {
+      background-color: $highlight;
+      text-decoration: none;
+      color: $background;
+      padding: 0.25 * $cube 0.5 * $cube;
+      font-weight: 700;
+      border: 2px solid $highlight;
+
+      &:hover {
         background-color: $highlight2;
+        border-color: $highlight2;
+      }
     }
+
+    &.btn-secondary {
+      background-color: inherit;
+      color: $foreground;
+
+      &:hover {
+        color: $background;
+      }
+    }
+
+  }
 }
 
-img {
+img.jules {
     position: static;
     margin-top: $cube;
     margin-left: auto;
