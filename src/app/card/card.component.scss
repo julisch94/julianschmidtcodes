@@ -27,40 +27,55 @@ p {
     }
 }
 
+a {
+  &.btn {
+    background-color: $highlight;
+    text-decoration: none;
+    color: $background;
+    padding: 0.25 * $cube 0.5 * $cube;
+    font-weight: 700;
+
+    &:hover {
+      background-color: rgba($highlight, $pale);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: inherit;
+    color: $foreground;
+
+    &:hover {
+      color: $background;
+    }
+  }
+
+  &.btn-contact {
+    display: inline-block;
+    margin-top: $cube;
+  }
+}
+
 div.links {
   margin-top: $cube;
   display: flex;
   flex-flow: row;
   align-items: center;
+  height: 1.5 * $cube;
 
   a {
-    &.btn {
-      background-color: $highlight;
-      text-decoration: none;
-      color: $background;
-      padding: 0.25 * $cube 0.5 * $cube;
-      font-weight: 700;
-      border: 2px solid $highlight;
+    height: 100%;
 
-      &:hover {
-        background-color: $highlight2;
-        border-color: $highlight2;
-      }
-    }
-
-    &.btn-secondary {
-      background-color: inherit;
-      color: $foreground;
-
-      &:hover {
-        color: $background;
-      }
-    }
-
-    &:first-child {
+    &:not(:last-child) {
       margin-right: 0.5 * $cube;
     }
 
+    &:hover {
+      opacity: $pale;
+    }
+
+    img {
+      height: 100%;
+    }
   }
 }
 
