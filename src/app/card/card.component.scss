@@ -40,15 +40,6 @@ a {
     }
   }
 
-  &.btn-secondary {
-    background-color: inherit;
-    color: $foreground;
-
-    &:hover {
-      color: $background;
-    }
-  }
-
   &.btn-contact {
     display: inline-block;
     margin-top: $cube;
