@@ -5,11 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CardComponent } from './card/card.component';
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 
 @NgModule({
-    declarations: [AppComponent, NavbarComponent, CardComponent],
-    imports: [BrowserModule, AppRoutingModule],
-    providers: [],
-    bootstrap: [AppComponent],
+  declarations: [AppComponent, NavbarComponent, CardComponent],
+  imports: [BrowserModule, AppRoutingModule, SnotifyModule],
+  providers: [
+    { provide: 'SnotifyToastConfig', useValue: ToastDefaults },
+    SnotifyService,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}

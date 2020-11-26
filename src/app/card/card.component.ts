@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { SnotifyPosition, SnotifyService } from 'ng-snotify';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
 
   mail = 'contact@julianschmidt.codes';
 
-  constructor() { }
+  constructor(readonly service: SnotifyService) { }
 
   ngOnInit(): void {
   }
@@ -26,5 +27,10 @@ export class CardComponent implements OnInit {
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
+
+    this.service.success('Copied to clipboard', 'Done', {
+      showProgressBar: false,
+      position: SnotifyPosition.centerTop,
+    });
   }
 }
