@@ -78,6 +78,11 @@ div.links {
       height: 100%;
     }
   }
+
+  @include breakpoint('l') {
+    position: absolute;
+    bottom: 2 * $cube;
+  }
 }
 
 img.jules {
