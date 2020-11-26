@@ -27,8 +27,13 @@ p {
     }
 }
 
-a {
-  &.btn {
+div.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: $cube;
+
+  a.btn {
     background-color: $highlight;
     text-decoration: none;
     color: $background;
@@ -40,9 +45,14 @@ a {
     }
   }
 
-  &.btn-contact {
-    display: inline-block;
-    margin-top: $cube;
+  a.copy {
+    height: $cube;
+    margin-left: 0.5 * $cube;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+    }
   }
 }
 
