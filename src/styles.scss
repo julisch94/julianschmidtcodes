@@ -41,3 +41,16 @@ img {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
 }
+
+a {
+  @extend .no-tap-highlight;
+
+  text-decoration: none;
+  color: $foreground;
+  font-weight: 300;
+  cursor: pointer;
+
+  &:hover {
+    filter: invert(30%) sepia(79%) saturate(378%) hue-rotate(176deg) brightness(92%) contrast(91%);
+  }
+}

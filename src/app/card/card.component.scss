@@ -34,9 +34,6 @@ div.contact {
   margin-top: 1.5 * $cube;
 
   a.mail {
-    text-decoration: none;
-    color: $foreground;
-    font-weight: normal;
     font-size: 0.7 * $cube;
 
     @include breakpoint('xs') {
@@ -47,7 +44,6 @@ div.contact {
   a.copy {
     height: $cube;
     margin-left: 0.5 * $cube;
-    cursor: pointer;
 
     img {
       height: 100%;
@@ -67,10 +63,6 @@ div.links {
 
     &:not(:last-child) {
       margin-right: 0.5 * $cube;
-    }
-
-    &:hover {
-      opacity: $pale;
     }
 
     img {
