@@ -22,19 +22,19 @@ img {
 @font-face {
     font-family: 'Space Grotesk';
     src: url('./assets/fonts/SpaceGrotesk-Bold.otf') format('opentype');
-    font-weight: bold;
+    font-weight: 700;
 }
 
 @font-face {
     font-family: 'Space Grotesk';
     src: url('./assets/fonts/SpaceGrotesk-Regular.otf') format('opentype');
-    font-weight: normal;
+    font-weight: 400;
 }
 
 @font-face {
     font-family: 'Space Grotesk';
     src: url('./assets/fonts/SpaceGrotesk-Light.otf') format('opentype');
-    font-weight: light;
+    font-weight: 300;
 }
 
 .no-tap-highlight {
