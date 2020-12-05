@@ -37,13 +37,17 @@ div.contact {
     font-size: 0.7 * $cube;
 
     @include breakpoint('xs') {
-      font-size: 0.9 * $cube;
+      font-size: 0.8 * $cube;
     }
   }
 
   a.copy {
-    height: $cube;
+    height: 0.9 * $cube;
     margin-left: 0.5 * $cube;
+
+    @include breakpoint('xs') {
+      height: $cube;
+    }
 
     img {
       height: 100%;
