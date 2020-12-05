@@ -56,11 +56,11 @@ div.contact {
 }
 
 div.links {
-  margin-top: $cube;
+  margin-top: 1.5 * $cube;
   display: flex;
   flex-flow: row;
   align-items: center;
-  height: 1.5 * $cube;
+  height: 1.25 * $cube;
 
   a {
     height: 100%;
