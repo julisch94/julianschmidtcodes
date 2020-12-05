@@ -53,3 +53,13 @@ a {
     filter: invert(30%) sepia(79%) saturate(378%) hue-rotate(176deg) brightness(92%) contrast(91%);
   }
 }
+
+::selection {
+  color: $background;
+  background: $highlight;
+}
+
+::-moz-selection {
+  color: $background;
+  background: $highlight;
+}
