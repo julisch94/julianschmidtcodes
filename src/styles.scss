@@ -45,7 +45,6 @@ img {
 a {
   @extend .no-tap-highlight;
 
-  text-decoration: none;
   color: $foreground;
   font-weight: 300;
   cursor: pointer;
