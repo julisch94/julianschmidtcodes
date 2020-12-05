@@ -31,17 +31,16 @@ div.contact {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: $cube;
+  margin-top: 1.5 * $cube;
 
-  a.btn {
-    background-color: $highlight;
+  a.mail {
     text-decoration: none;
-    color: $background;
-    padding: 0.25 * $cube 0.5 * $cube;
-    font-weight: 700;
+    color: $foreground;
+    font-weight: normal;
+    font-size: 0.7 * $cube;
 
-    &:hover {
-      background-color: rgba($highlight, $pale);
+    @include breakpoint('xs') {
+      font-size: 0.9 * $cube;
     }
   }
 
