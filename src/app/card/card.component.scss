@@ -74,7 +74,7 @@ div.links {
     }
   }
 
-  @include breakpoint('l') {
+  @include breakpoint('xl') {
     position: absolute;
     bottom: 2 * $cube;
   }
